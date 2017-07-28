@@ -7,11 +7,13 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    cpu_widget_( this )
+    cpu_widget_{ this },
+    memory_widget_{ this }
 {
     ui->setupUi(this);
     System_Info::instance().init();
     ui->centralWidget->layout()->addWidget( &cpu_widget_ );
+    ui->centralWidget->layout()->addWidget( &memory_widget_ );
 }
 
 MainWindow::~MainWindow()

@@ -2,6 +2,7 @@
 
 #include <sys/types.h>
 #include <sys/sysinfo.h>
+#include <iostream>
 
 #include <QFile>
 
@@ -38,7 +39,8 @@ double Linux_System_Info::memory_used()
     total_memory_used += mem_info.totalswap - mem_info.freeswap;
     total_memory_used *= mem_info.mem_unit;
 
-    const double percent = static_cast<double>( total_memory_used ) / static_cast<double>( total_memory * 100.0 );
+    const double percent = total_memory_used / ( total_memory * 100.0 );
+    std::cout << "percent = " << percent << std::endl;
     return qBound( 0.0, percent, 100.0 );
 }
 

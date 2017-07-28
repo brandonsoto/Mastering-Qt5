@@ -29,13 +29,15 @@ SOURCES += \
         mainwindow.cpp \
         system_info.cpp \
     system_info_widget.cpp \
-    cpu_widget.cpp
+    cpu_widget.cpp \
+    memory_widget.cpp
 
 HEADERS += \
         mainwindow.h \
         system_info.h \
     system_info_widget.h \
-    cpu_widget.h
+    cpu_widget.h \
+    memory_widget.h
 
 windows {
     SOURCES += windows_system_info.cpp

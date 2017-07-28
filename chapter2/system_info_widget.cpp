@@ -15,7 +15,7 @@ System_Info_Widget::System_Info_Widget(QWidget *parent, const int start_dely_ms,
 
     // set up chartview
     chartview_.setRenderHint( QPainter::Antialiasing );
-    chartview_.chart()->legend()->setVisible( false );
+    chartview_.chart()->legend()->setVisible( true );
 
     // set up layout
     QVBoxLayout* layout = new QVBoxLayout( this );
