@@ -28,5 +28,5 @@ SOURCES +=
 
 HEADERS += \
         album.h \
-        gallery-core_global.h \ 
+        gallery-core_global.h \
         picture.h
