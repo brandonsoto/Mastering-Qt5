@@ -11,6 +11,8 @@ QT       -= gui
 TARGET = gallery-core
 TEMPLATE = lib
 
+CONFIG += c++14
+
 DEFINES += GALLERYCORE_LIBRARY
 
 # The following define makes your compiler emit warnings if you use
@@ -24,9 +26,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-SOURCES +=
+SOURCES += \
+    database_manager.cpp \
+    album_database.cpp \
+    picture_database.cpp
 
 HEADERS += \
         album.h \
         gallery-core_global.h \
-        picture.h
+        picture.h \
+    database_manager.h \
+    album_database.h \
+    picture_database.h
