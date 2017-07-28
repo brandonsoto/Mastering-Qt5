@@ -29,7 +29,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     database_manager.cpp \
     album_database.cpp \
-    picture_database.cpp
+    picture_database.cpp \
+    album_model.cpp \
+    picture_model.cpp
 
 HEADERS += \
         album.h \
@@ -37,4 +39,6 @@ HEADERS += \
         picture.h \
     database_manager.h \
     album_database.h \
-    picture_database.h
+    picture_database.h \
+    album_model.h \
+    picture_model.h

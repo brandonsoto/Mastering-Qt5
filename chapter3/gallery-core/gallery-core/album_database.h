@@ -15,7 +15,7 @@ public:
     explicit Album_Database( QSqlDatabase& database );
     void init() const;
     void add_album( Album& album ) const;
-    void remove_album( Album& album ) const;
+    void remove_album( int id ) const;
     void update_album( Album& album ) const;
     album_list get_albums() const;
 

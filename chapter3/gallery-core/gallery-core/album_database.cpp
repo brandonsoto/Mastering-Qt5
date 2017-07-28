@@ -28,14 +28,12 @@ void Album_Database::add_album(Album &album) const
     album.set_id( query.lastInsertId().toInt() );
 }
 
-void Album_Database::remove_album(Album &album) const
+void Album_Database::remove_album(int id) const
 {
     QSqlQuery query( database_ );
     query.prepare( "DELETE FROM albums WHERE id = (:id)" );
-    query.bindValue( ":id", album.id() );
+    query.bindValue( ":id", id );
     query.exec();
-
-    album.set_id( query.lastInsertId().toInt() );
 }
 
 void Album_Database::update_album(Album &album) const
